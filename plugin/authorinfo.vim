@@ -114,7 +114,9 @@ function s:AddTitle()
 
     let firstLine = line('.')
     call setline('.',noTypeChar.#!/usr/bin/env python)
+    normal o
     call setline('.',noTypeChar.# -*- coding: utf-8 -*-)
+    normal o
 
     call setline('.',noTypeChar.'=============================================================================')
     normal o
