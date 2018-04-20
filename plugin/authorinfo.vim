@@ -1,10 +1,10 @@
 "=============================================================================
-"  Author:          dantezhu - http://www.vimer.cn
-"  Email:           zny2008@gmail.com
+"  Author:          chenomg - http://jase.im
+"  Email:           xxmm@live.cn
 "  FileName:        authorinfo.vim
 "  Description:     
 "  Version:         1.5
-"  LastChange:      2011-02-23 16:42:42
+"  LastChange:      2018-04-21 04:33:08
 "  History:         support bash's #!xxx
 "                   fix bug for NerdComment's <leader>
 "=============================================================================
@@ -113,6 +113,9 @@ function s:AddTitle()
     call s:BeforeTitle()
 
     let firstLine = line('.')
+    call setline('.',noTypeChar.#!/usr/bin/env python)
+    call setline('.',noTypeChar.# -*- coding: utf-8 -*-)
+
     call setline('.',noTypeChar.'=============================================================================')
     normal o
     call setline('.',noTypeChar.preChar.'     FileName: '.expand("%:t"))
