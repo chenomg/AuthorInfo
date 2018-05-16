@@ -75,6 +75,10 @@ function s:BeforeTitle()
     endfor
 endfunction
 function s:AfterTitle()
+    call setline('.',noTypeChar.preChar.'#!/usr/bin/env python')
+    normal o
+    call setline('.',noTypeChar.preChar.'# -*- coding: utf-8 -*-')
+    normal o
     let arrData = [['python',"'''"]]
     for [t,v] in arrData
         if g:CheckFileType(t)
