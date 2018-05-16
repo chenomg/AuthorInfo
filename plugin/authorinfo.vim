@@ -1,5 +1,5 @@
 "=============================================================================
-"  Author:          chenomg - http://jase.im
+"  Author:          chenomg - https://jase.im
 "  Email:           xxmm@live.cn
 "  FileName:        authorinfo.vim
 "  Description:     
@@ -127,6 +127,8 @@ function s:AddTitle()
     call setline('.',noTypeChar.preChar.'     HomePage: '.g:vimrc_homepage)
     normal o
     call setline('.',noTypeChar.preChar.'      Version: 0.0.1')
+    normal o
+    call setline('.',noTypeChar.preChar.'      License: GPLv2')
     normal o
     call setline('.',noTypeChar.preChar.'   LastChange: '.strftime("%Y-%m-%d %H:%M:%S"))
     normal o
