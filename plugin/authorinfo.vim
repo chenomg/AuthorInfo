@@ -171,7 +171,7 @@ function s:TitleDet()
     endwhile
     if updated == 1
         silent! normal 's
-        echohl WarningMsg | echo "Succ to update the copyright." | echohl None
+        "echohl WarningMsg | echo "Succ to update the copyright." | echohl None
         return
     endif
     call s:AddTitle()
