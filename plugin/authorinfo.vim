@@ -109,10 +109,16 @@ function s:AddTitle()
         endif
     endif
 
-    call setline('.',noTypeChar.preChar.'#!/usr/bin/env python')
-    normal o
-    call setline('.',noTypeChar.preChar.'# -*- coding: utf-8 -*-')
-    normal o
+    let PyarrData = [['python',"'''"]]
+    for [t,v] in PyarrData
+        if g:CheckFileType(t)
+            call setline('.',noTypeChar.preChar.'#!/usr/bin/env python')
+            normal o
+            call setline('.',noTypeChar.preChar.'# -*- coding: utf-8 -*-')
+            normal o
+            break
+        endif
+    endfor
     "在第一行之前做的事情
     call s:BeforeTitle()
     let firstLine = line('.')
