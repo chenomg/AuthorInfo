@@ -112,7 +112,7 @@ function s:AddTitle()
     let PyarrData = [['python',"'''"]]
     for [t,v] in PyarrData
         if g:CheckFileType(t)
-            call setline('.',noTypeChar.preChar.'#!/usr/bin/env python')
+            call setline('.',noTypeChar.preChar.'#!/usr/bin/env python3')
             normal o
             call setline('.',noTypeChar.preChar.'# -*- coding: utf-8 -*-')
             normal o
